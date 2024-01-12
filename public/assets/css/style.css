@@ -40,11 +40,14 @@
 /* 1. Theme default css */
  body {
        font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	font-weight: normal;
-	color: #777;
-	font-style: normal;
-     line-height: 26px;
+       min-height: 100vh;
+       font-family: 'Montserrat', sans-serif;
+       background-color: #f8f8f8;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+
+	
+
 }
 .text-left{
     text-align: left !important;
