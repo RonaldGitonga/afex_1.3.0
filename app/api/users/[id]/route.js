@@ -1,13 +1,11 @@
-import db from "@/lib/db";
+import { connectToDB } from "@/lib/utils/connectToDb";
 import { NextResponse } from "next/server";
+import { User } from "@/lib/models";
 
 export async function GET(request, { params: { id } }) {
   try {
-    const user = await db.user.findUnique({
-      where: {
-        id,
-      },
-    });
+    await connectToDB()
+    const user = await User.findOne({id });
     return NextResponse.json(user);
   } catch (error) {
     console.log(error);
