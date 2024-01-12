@@ -80,7 +80,7 @@ function Main() {
                                                 <div className="text">
                                                     <span>Email Now</span>
                                                     <strong>
-                                                        <Link href="mailto:info@example.com">info@afexhub.com</Link>
+                                                        <Link href="mailto:info@example.com">info@afexhub.co.ke</Link>
                                                     </strong>
                                                 </div>
                                             </div>
@@ -98,7 +98,7 @@ function Main() {
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
                                         <Link href="/">
-                                            <Image src={'https://utfs.io/f/add6b694-9b50-451b-b819-eead915144a0-atl5s3.jpeg'} width={60} height={60} className='rounded-4'/>
+                                            <Image src={'https://utfs.io/f/add6b694-9b50-451b-b819-eead915144a0-atl5s3.jpeg'}width={60} height={60}  className='rounded-4'/>
                                         </Link>
                                     </div>
                                 </div>

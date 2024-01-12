@@ -1,13 +1,13 @@
 import React from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom';
-import ChooseSection from '../../components/ChooseSection/ChooseSection';
-import StartCoursesImg from '../../utils/images/start-courses-img.jpg';
-import FaqAccordion from '../../components/FaqAccordion/FaqAccordion';
+import  Link  from 'next/link';
+import ChooseSection from '@/components/ChooseSection/ChooseSection';
+import StartCoursesImg from '@/lib/utils/landing/images/start-courses-img.jpg'
+import FaqAccordion from '@/components/FaqAccordion/FaqAccordion';
 import { Card } from 'react-bootstrap';
-import Blog1Img from '../../utils/images/blog1-img.jpg';
-import Blog2Img from '../../utils/images/blog2-img.jpg';
-import Blog3Img from '../../utils/images/blog3-img.jpg';
+import Blog1Img from '@/utils/landing/images/blog1-img.jpg';
+import Blog2Img from '@/utils/landing/images/blog2-img.jpg';
+import Blog3Img from '@/utils/landing/images/blog3-img.jpg';
 
 const blogs = [
     {
