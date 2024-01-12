@@ -1,6 +1,6 @@
-import { updateCourse } from "@/app/../lib/actions";
-import { fetchCourse } from "@/app/../lib/data";
-import styles from "@/app/@/app/dashboard/courses/singlecourse/singlecourse.module.css";
+import { updateCourse } from "@/lib/actions";
+import { fetchCourse } from "@/lib/data";
+import styles from "@/app/ui/dashboard/courses/singlecourse/singlecourse.module.css";
 import Image from "next/image";
 
 const SingleCoursePage = async ({ params }) => {

@@ -1,6 +1,6 @@
 'use client'
 import { addCourse } from "@/lib/actions";
-import styles from "@/app/dashboard/courses/addcourse/addcourse.module.css";
+import styles from "@/app/ui/dashboard/courses/addcourse/addcourse.module.css";
 
 const AddCoursePage = () => {
   return (
