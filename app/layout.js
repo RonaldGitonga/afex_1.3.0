@@ -9,10 +9,7 @@ import Link from 'next/link'
 
 
 import "@/app/front.css"
-//import '@/app/globals.css'
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
+
 
 
 
