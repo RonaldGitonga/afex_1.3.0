@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 
 import "@/app/front.css"
-
+import "@/app/globals.css"
 
 
 
