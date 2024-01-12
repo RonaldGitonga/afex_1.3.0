@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.home-page header {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(https://utfs.io/f/89cfbbf9-2f1d-46d9-b840-7a1e4ca7ddf9-2f9.webp)
+
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-section {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(https://utfs.io/f/be32c2f2-2d72-4062-85cc-5268959c1b65-pbvsgg.jpg);
+    background-size: cover;
+    background-position: center;
+}
