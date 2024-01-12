@@ -29,18 +29,21 @@ import '@/public/assets/css/style.css'
  import '@/public/assets/css/responsive.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import BootstrapClient from '@/components/BootstrapClient';
+import {Montserrat} from 'next/font/google'
 
 
-
-
-// export const metadata = {
-//   title: "AFEX HUB",
-//   description: "We do test preps",
-// };
+const montserrat=Montserrat({
+  subsets:['latin'],
+  display:'swap',
+})
+export const metadata = {
+  title: "AFEX HUB",
+  description: "Kenya's Premier Test Prep Centre",
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <body >
         <AuthProvider>
           <Toaster position="top-center" reverseOrder={false}/>
