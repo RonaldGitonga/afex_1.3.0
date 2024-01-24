@@ -61,11 +61,11 @@ function Home() {
 
         <div className='blog-section text-light py-5'>
             <div className='container d-flex flex-column align-items-center'>
-                <h2 className='text-center text-capitalize mb-5'>Latest Posts</h2>
+                <h2 className='text-center text-capitalize mb-5 ' style={{color:'#fff'}}>Latest Posts</h2>
                 <div className='row g-4'>
                     {blogs.map((blog) => (
                         <div key={blog.id} className='col-md-6 col-lg-4'>
-                            <Link href="/blog" className='text-decoration-none'>
+                            <Link href="https://afexhub.blogspot.com/search?updated-max=2023-06-05T03:43:00-07:00&max-results=7" className='text-decoration-none'>
                                 <Card className='h-100 shadow scale-hover-effect'>
                                     <Card.Img variant="top" src={blog.img} />
                                     <Card.Body className='p-md-5'>
@@ -77,7 +77,7 @@ function Home() {
                         </div>
                     ))}
                 </div>
-                <Link href="/blog">
+                <Link href="/Blog">
                     <button type='button' className='btn  btn-lg mt-5 'style={{background:'#af3d2c',color:'white'}}>Read More Blogs</button>
                 </Link>
             </div>
