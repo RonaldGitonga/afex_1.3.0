@@ -1,7 +1,9 @@
 .contact-page header {
     background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(../../lib/utils/landing/images/contact-page-header.jpg);
 }
-
+.contact-page header div h1{
+    color: white;
+}
 #contact-form {
     width: 50%;
 }

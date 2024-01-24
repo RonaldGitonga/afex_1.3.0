@@ -18,7 +18,7 @@ const slides=[
         desc1:'Enrollment is in progress.',
         desc2:'Sign Up Now',
         cta:'Register',
-        ctaLink:'/Login'
+        ctaLink:'/Contact'
     },
     {
         title:"Financial_aid_slide",
@@ -26,7 +26,7 @@ const slides=[
         desc1:'Need Financial Assistance?',
         desc2:'We Can help.',
         cta:'Find Out',
-        ctaLink:'/Study Abroad'
+        ctaLink:'/Contact'
     },
     {
         title:"Testimonials_slide",

@@ -44,13 +44,13 @@ function Main() {
                                         <Link href="https://www.facebook.com/afexhome?mibextid=ZbWKwL" title="Facebook">
                                             <i className="fab fa-facebook-f" />
                                         </Link>
-                                        <Link href="https://www.instagram.com/afexkenya?igsh=ODA1NTc5OTg5Nw==" title="LinkedIn">
+                                        <Link href="https://www.instagram.com/afexkenya?igsh=ODA1NTc5OTg5Nw==" title="Instagram">
                                             <i className="fab fa-instagram" />
                                         </Link>
                                         <Link href="https://x.com/AfexKenya?t=16INcDh7pyWyzWB_7AKGLQ&s=09" title="Twitter">
                                             <i className="fab fa-twitter" />
                                         </Link>
-                                        <Link href="#" title="Twitter">
+                                        <Link href="#" title="Youtube">
                                             <i className="fab fa-youtube" />
                                         </Link>
                                     </span>
@@ -80,7 +80,7 @@ function Main() {
                                                 <div className="text">
                                                     <span>Email Now</span>
                                                     <strong>
-                                                        <Link href="mailto:info@example.com">info@afexhub.co.ke</Link>
+                                                        <Link href="/Contact">info.kenya@afexhub.co.ke</Link>
                                                     </strong>
                                                 </div>
                                             </div>
@@ -196,7 +196,7 @@ function Main() {
                                                             <Link href="/About">About Us</Link>
                                                         </li>
                                                         <li className="has-sub">
-                                                            <Link href="/courses">Courses</Link>
+                                                            <Link href="/Courses">Courses</Link>
                                                             <ul>
                                                                 <li>
                                                                     <Link href="/Courses/SAT">SATs</Link>

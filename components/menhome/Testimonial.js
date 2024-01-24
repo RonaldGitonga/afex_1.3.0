@@ -75,7 +75,7 @@ function Testimonial() {
                                     <Image width={80} height={80}src="https://utfs.io/f/09f09322-1703-4c36-ae31-28829ff4045c-ig9ynh.jpg" alt="img" className='rounded-circle' />
                                 </div>
                                 <div className="ta-info">
-                                <h6>Jackelin Matetsu</h6>
+                                <h6>Jackelin Masetu</h6>
                                 <span>Bucknell University</span>
                                 </div>
                             </div>
