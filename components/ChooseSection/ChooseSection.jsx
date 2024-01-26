@@ -20,7 +20,7 @@ function ChooseSection() {
                         </div>
                         <Card.Body>
                             <Card.Title className='text-center text-capitalize mb-3'>
-                                Admissions in 2023
+                                Top SAT Score in 2023
                             </Card.Title>
                             <Card.Text className='text-center'>
                             At AFEX Hub, our unique blend of personalized coaching, experienced tutors, the best resources, and a deep commitment to each student's success sets us apart.  
