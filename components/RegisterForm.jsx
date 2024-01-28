@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-
+import "@/app/globals.css"
 export default function RegisterForm() {
   const router = useRouter();
   const {
