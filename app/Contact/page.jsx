@@ -25,7 +25,7 @@ function Contact() {
         setLoading(true);
         emailjs.send(
           'service_0m4onqn',
-          'template_3wx3xeo',
+          'template_2teol33',
           {
             from_firstName:firstName,
             from_lastName:lastName,
@@ -41,7 +41,7 @@ function Contact() {
         )
         .then(()=>{
           setLoading(false);
-          alert('Thank you.We will get back to you as soon as possible');
+          alert('Thank you. We will get back to you as soon as possible');
             setFirstName('')
             setLastName('')
             setemail('')
