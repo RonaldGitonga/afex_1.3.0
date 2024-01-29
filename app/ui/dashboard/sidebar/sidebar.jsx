@@ -153,7 +153,7 @@ session?.user?.role==='Admin'
       </div>
       <ul className={styles.list}>
         {menuItems.map((cat) => (
-          <li key={cat.title}>
+          <li key={cat.title} style={{color:'#fff'}}>
             <span className={styles.cat}>{cat.title}</span>
             {cat.list.map((item) => (
               <MenuLink item={item} key={item.title} />

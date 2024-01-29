@@ -24,8 +24,8 @@ function Contact() {
     
         setLoading(true);
         emailjs.send(
-          'service_epchor9',
-          'template_z80dsmq',
+          'service_0m4onqn',
+          'template_3wx3xeo',
           {
             from_firstName:firstName,
             from_lastName:lastName,
@@ -36,7 +36,7 @@ function Contact() {
             message:message
     
           },
-          'TwFsrPqxSmJVbbCD5'
+          'qVDfoo38_mADnn0aG'
     
         )
         .then(()=>{
