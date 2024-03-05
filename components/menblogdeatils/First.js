@@ -280,7 +280,7 @@ function First() {
                                         </div>
                                         <div className="comment-text">
                                             <div className="avatar-name mb-15">
-                                                <h6>Roboto Alex</h6>
+                                                <h6>Montserrat Alex</h6>
                                                 <span>21th May 2021</span>
                                             </div>
                                             <p>

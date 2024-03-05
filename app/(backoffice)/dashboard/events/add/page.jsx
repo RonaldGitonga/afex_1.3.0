@@ -1,51 +1,96 @@
 'use client'
 import React, { useState } from 'react';
-import axios from 'axios';
+import toast from 'react-hot-toast';
+import { UploadDropzone} from '@/lib/uploadthing';
+import { useRouter } from "next/navigation";
+
+
 
 const EventForm = () => {
+  const router=useRouter()
   const [formData, setFormData] = useState({
+    title:'',
     date: '',
     time: '',
     location: '',
     description: '',
-    picture: null,
+
   });
+  const[imageUrl,setImageUrl]=useState('')
+  const[loading,setLoading]=useState(false)
+  const [eventErr, setEventErr] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, picture: e.target.files[0] });
-  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = new FormData();
+    data.append('title', formData.title);
     data.append('date', formData.date);
     data.append('time', formData.time);
     data.append('location', formData.location);
     data.append('description', formData.description);
-    data.append('picture', formData.picture);
+    data.append('image', imageUrl);
+
+    const myData=Object.fromEntries(data)
 
     try {
-      const response = await axios.post('/api/events', data, {
+      // console.log('dat to be sent via API')
+      // console.log(JSON.stringify(data));
+      console.log('sending myData')
+      console.log(myData)
+     
+      setLoading(true);
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+      const response = await fetch(`${baseUrl}/api/events`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
+        body:JSON.stringify(myData),
       });
 
-      console.log(response.data);
-      // Handle success, e.g., redirect or show a success message
+      const responseData = await response.json();
+
+      if (response.ok) {
+        setLoading(false);
+        toast.success("Event Created Successfully");
+        reset();
+        router.push("/dashboard/events");
+      } else {
+        setLoading(false);
+        if (response.status === 409) {
+          setEventErr("This Event already exists");
+          toast.error("This Event already exists");
+        } else {
+          // Handle other errors
+          console.error("Server Error:", responseData.message);
+          toast.error("Oops Something Went wrong");
+        }
+      }
     } catch (error) {
-      console.error(error);
-      // Handle error, e.g., show an error message
+      setLoading(false);
+      console.error("Network Error:", error);
+      toast.error("Something Went wrong, Please Try Again");
     }
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-lg text-black">
+        <label className="block mb-4">
+        <span className="text-gray-700">Title:</span>
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          className="mt-1 p-2 block w-full rounded-md border-gray-300 text-black"
+        />
+        </label>
       <label className="block mb-4">
         <span className="text-gray-700">Date:</span>
         <input
@@ -78,17 +123,29 @@ const EventForm = () => {
         <textarea
           name="description"
           onChange={handleChange}
-          className="mt-1 p-2 block w-full rounded-md border-gray-300"
+          className="mt-1 p-2 block w-full rounded-md border-gray-300 text-black"
         ></textarea>
       </label>
       <label className="block mb-4">
         <span className="text-gray-700">Picture:</span>
-        <input
-          type="file"
-          name="picture"
-          onChange={handleFileChange}
-          className="mt-1 p-2 block w-full rounded-md border-gray-300"
-        />
+
+        <UploadDropzone
+        name ='image'
+        endpoint="imageUploader"
+       
+        
+        onClientUploadComplete={(res) => {
+          // Do something with the response
+           setImageUrl(res[0].url)
+      
+           console.log(imageUrl);
+          alert("Upload Completed");
+        }}
+        onUploadError={(error) => {
+          // Do something with the error.
+          alert(`ERROR! ${error.message}`);
+        }}
+      />
       </label>
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
         Create Event

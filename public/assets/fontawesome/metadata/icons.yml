@@ -33481,12 +33481,12 @@ umbrella-beach:
     - duotone
   unicode: f5ca
   voted: false
-underline:
+none:
   changes:
     - '2'
     - 5.0.0
     - 5.9.0
-  label: Underline
+  label: none
   search:
     terms:
       - edit

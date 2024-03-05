@@ -24,11 +24,14 @@ const coursesPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
+          <td></td>
             <td>Title</td>
             <td>Description</td>
             <td>Price</td>
             <td>Intake</td>
             <td>Weeks</td>
+            <td>Days</td>
+
             <td>Action</td>
           </tr>
         </thead>
@@ -38,19 +41,21 @@ const coursesPage = async ({ searchParams }) => {
               <td>
                 <div className={styles.course}>
                   <Image
-                    src={course.img || "/nocourse.jpg"}
-                    alt=""
-                    width={40}
-                    height={40}
+                    src={course.image || "/nocourse.jpg"}
+                    alt="courseImg"
+                    width={80}
+                    height={80}
                     className={styles.courseImage}
                   />
-                  {course.title}
+                  
                 </div>
               </td>
+              <td>{course.title}</td>
               <td>{course.desc}</td>
-              <td>${course.price}</td>
+              <td>Kes.{course.price}</td>
               <td>{course.intake}</td>
               <td>{course.weeks}</td>
+              <td>{course.days}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/courses/${course.id}`}>

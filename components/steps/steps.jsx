@@ -4,16 +4,16 @@ import { Card } from 'react-bootstrap';
 
 function Steps() {
   return (
-    <div>
-        <div className="container">
-            <h2 className='text-center mb-5' style={{color:'#af3d2c'}}>What Do I Need ?</h2>
-            <div className='row g-4'>
-                <div className='col-lg-4'>
-                    <Card className='d-flex align-items-center border-0 h-100'>
+    <div style={{background: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(219,172,59,1) 54%)"}}>
+        <div className="container" >
+            <h2 className='text-center mb-5' style={{color:'#af3d2c',fontWeight:'bolder'}}>What Do I Need ?</h2>
+            <div className='row g-4' >
+                <div className='col-lg-4' style={{backgroundColor:'transparent'}}>
+                    <Card className='d-flex align-items-center border-0 h-100'style={{backgroundColor:'transparent'}}>
                         <div className='mt-3'>
                 
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{color:"#1a457e", fontWeight:'bold'}}>
                             <Card.Title className='text-center text-capitalize mb-3'>
                             STEP 1: Profile Review
                             </Card.Title>
@@ -24,12 +24,12 @@ function Steps() {
                     </Card>
                 </div>
                 <div className='col-lg-4'>
-                    <Card className='d-flex align-items-center border-0 h-100' >
+                    <Card className='d-flex align-items-center border-0 h-100' style={{backgroundColor:'transparent'}}>
                         
                         <div className='mt-3'>
                      
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{color:"#1a457e", fontWeight:'bold'}}>
                             <Card.Title className='text-center text-capitalize mb-3'>
                             STEP 2: Test prep
                             </Card.Title>
@@ -41,12 +41,12 @@ function Steps() {
                 </div>
                
                 <div className='col-lg-4'>
-                    <Card className='d-flex align-items-center border-0 h-100'>
+                    <Card className='d-flex align-items-center border-0 h-100'style={{backgroundColor:'transparent'}}>
                         <div className='mt-3'>
                             
                 
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{color:"#1a457e", fontWeight:'bold'}}>
                             <Card.Title className='text-center text-capitalize mb-3'>
                             STEP 3:  Selection of schools
                             </Card.Title>
@@ -58,12 +58,12 @@ function Steps() {
                     </Card>
                 </div>
                 <div className='col-lg-4'>
-                    <Card className='d-flex align-items-center border-0 h-100'>
+                    <Card className='d-flex align-items-center border-0 h-100'style={{backgroundColor:'transparent'}}>
                         <div className='mt-3'>
                             
                 
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{color:"#1a457e", fontWeight:'bold'}}>
                             <Card.Title className='text-center text-capitalize mb-3'>
                             STEP 4:  Essay Review
                             </Card.Title>
@@ -75,12 +75,12 @@ function Steps() {
                     </Card>
                 </div>
                 <div className='col-lg-4'>
-                    <Card className='d-flex align-items-center border-0 h-100'>
+                    <Card className='d-flex align-items-center border-0 h-100'style={{backgroundColor:'transparent'}}>
                         <div className='mt-3'>
                             
                 
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{color:"#1a457e", fontWeight:'bold'}}>
                             <Card.Title className='text-center text-capitalize mb-3'>
                             Step 5: Financial Aid Application
                             </Card.Title>

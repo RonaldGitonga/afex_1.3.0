@@ -22,9 +22,10 @@ const UsersPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
+            <td>Profile</td>
             <td>Name</td>
             <td>Email</td>
-            <td>Created At</td>
+            {/* <td>Created At</td> */}
             <td>Role</td>
             <td>Status</td>
             <td>Action</td>
@@ -42,12 +43,13 @@ const UsersPage = async ({ searchParams }) => {
                     height={40}
                     className={styles.userImage}
                   />
-                  {user.username}
+                  
                 </div>
               </td>
+              <td>{user.firstName}</td>
               <td>{user.email}</td>
-              <td>{user.createdAt?.toString().slice(4, 16)}</td>
-              <td>{user.isAdmin ? "Admin" : "Client"}</td>
+              {/* <td>{user.createdAt?.toString().slice(4, 16)}</td> */}
+              <td>{user.role}</td>
               <td>{user.isActive ? "active" : "passive"}</td>
               <td>
                 <div className={styles.buttons}>

@@ -68,6 +68,14 @@ background-position: 0 -100px;
 }
 .container-p {
 	padding: 0 30px;
+    background-image: 
+          linear-gradient(
+            180deg in oklab, 
+            #1a457e 0%, #fff 100%
+          )
+        
+      
+
 }
 .slider-active .slick-arrow {
 	left: 20px;

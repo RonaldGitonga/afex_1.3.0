@@ -7,7 +7,7 @@ const AddUserPage = () => {
   return (
     <div className={styles.container}>
       <form action={addUser} className={styles.form}>
-        <input type="text" placeholder="FirstName" name="firstName" required />
+        <input type="text" placeholder="First Name" name="firstName" required />
         <input type="text" placeholder="Last Name" name="lastName" required />
         <input type="email" placeholder="email" name="email" required />
         <input
@@ -16,7 +16,7 @@ const AddUserPage = () => {
           name="password"
           required
         />
-        <input type="phone" placeholder="phone" name="phone" />
+        <input type="phone" placeholder="Phone Number" name="phoneNumber" />
 
         <select name="role" id="role" onChange={event=>setRole(event.target.value)} defaultValue={'Student'}>
          
@@ -36,7 +36,7 @@ const AddUserPage = () => {
         <textarea
           name="address"
           id="address"
-          rows="16"
+          rows="2"
           placeholder="Address"
         ></textarea>
         <button type="submit">Submit</button>

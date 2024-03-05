@@ -76,7 +76,7 @@ function Brand() {
 
     return (
         <>
-            <div className="brand-area pt-60 pb-60" style={{ backgroundColor: "#125875" }}>
+            <div className="brand-area pt-60 pb-60" style={{ backgroundColor: "#1a457e" }}>
                 <div className="container">
                     <Slider className="row brand-active" {...settings}>
                         {images.map((image, index) => (

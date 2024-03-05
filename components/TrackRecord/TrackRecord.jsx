@@ -137,7 +137,7 @@ function Testimonial() {
 
   return (
     <>
-       <section className="testimonial-area pt-120 pb-115 p-relative fix">
+       <section className="testimonial-area pt-120 pb-115 p-relative fix"style={{backgroundImage:"url(https://utfs.io/f/135c3b8c-5ca5-4be7-a0cb-ea8147455ee8-wylmfh.png)", paddingTop:'30px',paddingBottom:'30px'}}>
             
             <div className="animations-02">
                 <Image width={40} height={40}src="/assets/img/bg/an-img-04.png" alt="contact-bg-an-01" />
@@ -145,12 +145,12 @@ function Testimonial() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <div className="section-title text-center mb-50 wow fadeInDown animated " data-animation="fadeInDown" data-delay=".4s" >
-                            <h5>
+                        <div className="section-title text-center mb-50 wow fadeInDown animated " data-animation="fadeInDown" data-delay=".4s" style={{background:'#fff',borderRadius:'12px'}} >
+                            <h5  style={{fontWeight:'bolder',paddingTop:'5px'}}>
                                 <i className="fal fa-graduation-cap" /> Admissions
                             </h5>
                        
-                            <h2>Admissions</h2>
+                            <h2 style={{color:'#1a457e',fontWeight:'bold' }}>Admissions</h2>
                           
                         </div>
                     </div>

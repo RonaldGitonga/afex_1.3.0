@@ -1,65 +1,112 @@
 'use client'
-import React, { useState} from 'react';
-import axios from 'axios';
-import ImageUpload from '@/components/Input/ImageUpload'
-import Input from "@/components/Input/Input"
-import { useRouter } from "next/navigation"
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import { UploadDropzone} from '@/lib/uploadthing';
+import { useRouter } from "next/navigation";
+import styles from "@/app/ui/dashboard/blogs/addBlog/addBlog.module.css"
 
 
 
+export default function AddBlogPage(){
+//router
+const router=useRouter()
 
-//create object for states makes it easier and neater
-const initialState={
-  name:'',
-  imageSrc:'',
-  description:''
+//form data
+const [formData, setFormData] = useState({
+  title:'',
+  price: '',
+  weeks: '',
+  intake: '',
+  cohort: '',
+  desc:'',
+  days:'',
 
-}
+});
+const[imageUrl,setImageUrl]=useState('')
+const[loading,setLoading]=useState(false)
+const [blogErr, setblogErr] = useState("");
 
-export default function page(){
-  const [state,setState]=useState(initialState);
-  const router=useRouter()
+const handleChange = (e) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+};
 
-const setCustomValue=(id,value)=>{
-  setState((prevValues)=>({
-      ...prevValues,
-      [id]:value
-  }))
-}
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-function handleChange(event){
-  setState({...state,[event.target.name]:event.target.value})
-}
+  const data = new FormData();
+  data.append('name', formData.name);
+  data.append('description', formData.descrption);
+  data.append('image', imageUrl);
 
-const onSubmit=(event)=>{
-  event.preventDefault()
+  const myData=Object.fromEntries(data)
 
-  axios.post('/api/blogs',state)
-  .then(()=>{
-      router.push('/dashboard/blogs')
-  })
-  .catch((err)=>{
-      throw new Error(err)
-  })
+  try {
+ 
+    console.log('sending myData')
+     console.log(myData)
+   
+    setLoading(true);
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const response = await fetch(`${baseUrl}/api/blogs`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      body:JSON.stringify(myData),
+    });
 
-  router.refresh()
+    const responseData = await response.json();
 
+    if (response.ok) {
+      setLoading(false);
+      toast.success("Blog Created Successfully");
+      reset();
+      router.push("/dashboard/blogs");
+    } else {
+      setLoading(false);
+      if (response.status === 409) {
+        setblogErr("This blog already exists");
+        toast.error("This blog already exists");
+      } else {
+        // Handle other errors
+        console.error("Server Error:", responseData.message);
+        toast.error("Oops Something Went wrong");
+      }
+    }
+  } catch (error) {
+    setLoading(false);
+    console.error("Network Error:", error);
+    toast.error("Something Went wrong, Please Try Again");
+  }
 }
 return(
-  <form onSubmit={onSubmit} className='w-[600px] h-[700px] mx-auto py-12'>
-      <div>
-          <ImageUpload value={state.imageSrc} onChange={(value)=>setCustomValue('imageSrc',value)}/>
-      </div>
+  <div className={styles.container}>
+  <form onSubmit={handleSubmit} className={styles.form}>
+      
 
-       <div className='flex flex-col justify-center h-[450px] w-[350px] mx-auto gap-2'>
-          <Input placeholder="Blog Title" id="name" type="text" name="name"value={state.name} onChange={handleChange} />
-          <Input big placeholder="Blog Content/Description" id="description" type="text" name="description" value={state.description} onChange={handleChange} />
-          <div>
-         
-          </div>
+          <input placeholder="Blog Title" id="name" type="text" name="name" onChange={handleChange} />
+          <input  placeholder="Blog Content/Description" id="description" type="text" name="description"  onChange={handleChange} />
+          <UploadDropzone
+        name ='image'
+        endpoint="imageUploader"
+       
+        
+        onClientUploadComplete={(res) => {
+          // Do something with the response
+           setImageUrl(res[0].url)
+      
+           console.log(imageUrl);
+          alert("Upload Completed");
+        }}
+        onUploadError={(error) => {
+          // Do something with the error.
+          alert(`ERROR! ${error.message}`);
+        }}
+      />
 
-          <button type="submit">Submit</button>
+          <button className='mt-20' type="submit">Submit</button>
+          </form>
        </div>
-  </form>
+
 )  
 }

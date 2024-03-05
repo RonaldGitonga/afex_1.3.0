@@ -3,7 +3,7 @@ import React from 'react'
 function Subscribe() {
     return (
         <>
-            <section className="newslater-area pt-60 pb-60" style={{ backgroundColor: "#125875" }} >
+            <section className="newslater-area pt-60 pb-60" style={{ backgroundColor: "#1a457e" }} >
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-xl-7 col-lg-7">

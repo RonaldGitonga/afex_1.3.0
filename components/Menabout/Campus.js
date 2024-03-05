@@ -3,7 +3,7 @@ import React from 'react'
 function Campus() {
   return (
     <>
-        <section className="steps-area2 p-relative fix" style={{ backgroundColor: "#125875" }} >
+        <section className="steps-area2 p-relative fix" style={{ backgroundColor: "#1a457e" }} >
             <div className="animations-02">
                 <img src="assets/img/afex-pics/RAMONA-POTRAIT-2.jpg" alt="an-img-01" />
             </div>
@@ -12,13 +12,13 @@ function Campus() {
                 <div className="col-lg-6 col-md-12">
                     <div className="step-box step-box2 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
                     <div className="dnumber">
-                        <div className="date-box">
-                            <img src="assets/img/icon/fea-icon01.png" alt="icon" />
+                        <div className="date-box" >
+                            <img src="assets/img/icon/fea-icon01.png" alt="icon" style={{transform: 'translate(45%, 35%)'}}/>
                         </div>
                     </div>
                     <div className="text">
-                        <h2>Who We Are</h2>
-                        <p>
+                        <h2 style={{color:'#fff'}}>Who We Are</h2>
+                        <p style={{color:'#fff'}}>
                         AFEX is a market leader in preparing students for the SAT, GRE, GMAT, IELTS, TOEFL and SSAT. Our students have achieved remarkable feats at these international exams, boosting students’ chances of gaining admissions into top schools. In August 2022 alone, 74% of our students' score ranked them among the Top 1% of millions of test-takers worldwide.
                         </p>
                     </div>
@@ -33,7 +33,7 @@ function Campus() {
             </div>
         </section>
 
-        <section className="steps-area2 p-relative fix" style={{ backgroundColor: "#032e3f" }} >
+        <section className="steps-area2 p-relative fix" style={{ backgroundColor: "#1a457e" }} >
             <div className="container">
                 <div className="animations-08">
                     <img src="assets/img/bg/an-img-20.png" alt="contact-bg-an-01" />
@@ -48,12 +48,12 @@ function Campus() {
                     <div className="step-box step-box3 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
                     <div className="dnumber">
                         <div className="date-box">
-                        <img src="assets/img/icon/fea-icon03.png" alt="icon" />
+                        <img src="assets/img/icon/fea-icon03.png" alt="icon"  style={{transform: 'translate(55%, 45%)'}}/>
                         </div>
                     </div>
-                    <div className="text">
+                    <div className="text" >
                         <h2>Powerful Alumni</h2>
-                        <p>
+                        <p style={{color:'#fff'}}>
                         Our distinguished alumni stand testament to the power of our 
                         comprehensive training and strategic placements. Many have seamlessly 
                         transitioned to prestigious universities, embodying the success that stems 

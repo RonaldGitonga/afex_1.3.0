@@ -11,7 +11,7 @@ const SingleCoursePage = async ({ params }) => {
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
-          <Image src="/noavatar.png" alt="" fill />
+          <Image src={course.image} alt="courseImg" fill />
         </div>
         {course.title}
       </div>

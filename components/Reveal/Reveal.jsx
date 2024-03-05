@@ -24,7 +24,7 @@ export const Reveal=({children,width='fit-content'})=>{
 
 
     return(
-        <div ref={ref} style={{position:'relative',width,overflow:'hidden'}}>
+        <div ref={ref} style={{position:'relative',width,overflow:'hidden' }}>
             <motion.div
          
             variants={
@@ -55,7 +55,8 @@ export const Reveal=({children,width='fit-content'})=>{
                 bottom:4,
                 left:0,
                 right:0,
-                background:'#fff',
+                background:'#1a457e',
+                borderRadius:'25px',
                 zIndex:20
             }}/>
 

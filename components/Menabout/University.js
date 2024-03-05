@@ -5,9 +5,9 @@ import { Reveal } from '../Reveal/Reveal'
 function University() {
   return (
     <>
-        <section className="about-area about-p pt-120 pb-120 p-relative fix">
+        <section className="about-area about-p pt-120 pb-120 p-relative fix" style={{backgroundImage:"linear-gradient(180deg, rgba(26,69,126,1) 51%, rgba(255,255,255,1) 100%)"}}>
             <div className="animations-02">
-                <img src="assets/img/afex-pics/OMTATA PORTRAIT 1.jpg" alt="contact-bg-an-01" />
+                <img src="assets/img/afex-pics/OMTATA PORTRAIT 1.jpg" alt="contact-bg-an-01" style={{backgroundBlendMode:'normal'}}/>
             </div>
             <div className="container">
                 <div className="row justify-content-center align-items-center">
@@ -26,13 +26,13 @@ function University() {
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <div className="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s" >
                     <div className="about-title second-title pb-25">
-                        <h5>
+                        <h5 style={{fontWeight:"bold",color:'#dbac3b' }}>
                         <i className="fal fa-graduation-cap" /> About Our Campus
                         </h5>
-                   <Reveal>   <h2>Who We are</h2> </Reveal>  
+                   <Reveal>   <h2 style={{color:'#dbac3b'}}>Who We are</h2> </Reveal>  
                     </div>
                     <Reveal>
-                    <p className="txt-clr" style={{fontWeight:'bold'}}>
+                    <p className="txt-clr" style={{fontWeight:'bold', color:'#dbac3b'}}>
                     Greetings from AFEXHub! Over the past 5 years in Kenya, we have been passionately
                      helping families navigate the journey to top universities in the US and Canada. 
                      Whether you're a student preparing for the SAT, GMAT, and IELTS, or a parent 

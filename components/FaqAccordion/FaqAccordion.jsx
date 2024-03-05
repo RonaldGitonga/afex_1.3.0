@@ -4,10 +4,10 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function FaqAccordion() {
   return (
-    <div className='faq-section'>
+    <div className='faq-section ' style={{paddingTop:'0px',marginTop:'-80px',marginBottom:'0px'}}>
         <div className='container d-flex flex-column align-items-center'>
-            <h2 className='text-center text-capitalize mb-5'>Frequently asked questions</h2>
-            <p className='text-center mb-5'>Some of the answers you might need.</p>
+            <h2 className='text-center text-capitalize mb-5' style={{fontWeight:'bolder',color:'#1a457e'}}>Frequently asked questions</h2>
+            <p className='text-center mb-5' style={{fontWeight:'bold'}}>Some of the answers you might need.</p>
             <Accordion defaultActiveKey="" flush>
                 <Accordion.Item eventKey='0'>
                     <Accordion.Header>Who is eligible for financial aid?</Accordion.Header>

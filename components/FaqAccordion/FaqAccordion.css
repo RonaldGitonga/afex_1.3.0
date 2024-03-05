@@ -6,6 +6,7 @@
 .accordion .accordion-button:focus,
 .accordion .accordion-button:not(.collapsed) {
     box-shadow: none;
+
 }
 
 .accordion .accordion-button:not(.collapsed) {
@@ -16,10 +17,14 @@
 .accordion .accordion-button:not(.collapsed)::after {
     filter: invert();
 }
+.collapse.show{
+    visibility: unset;
+}
 
 @media only screen and (max-width: 992px) {
     .faq-section p,
     .accordion {
         width: 100%;
     }
+  
 }

@@ -20,7 +20,7 @@ export default function VerifyAccount() {
             <div className="my-6">
               <p className="text-sm font-light text-gray-500 dark:text-gray-400 ">
                 Did not see it?{" "}
-                <button className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <button className="font-medium text-blue-600 hover:none dark:text-blue-500">
                   Resend the Link
                 </button>
               </p>

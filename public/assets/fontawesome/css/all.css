@@ -5904,7 +5904,7 @@ readers do not read off random characters that represent icons */
 .fa-umbrella-beach:before {
   content: "\f5ca"; }
 
-.fa-underline:before {
+.fa-none:before {
   content: "\f0cd"; }
 
 .fa-undo:before {
@@ -11075,7 +11075,7 @@ readers do not read off random characters that represent icons */
 .fad.fa-umbrella-beach:after {
   content: "\10f5ca"; }
 
-.fad.fa-underline:after {
+.fad.fa-none:after {
   content: "\10f0cd"; }
 
 .fad.fa-undo:after {

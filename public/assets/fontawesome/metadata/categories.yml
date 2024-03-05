@@ -1161,7 +1161,7 @@ editors:
     - trash-alt
     - trash-restore
     - trash-restore-alt
-    - underline
+    - none
     - undo
     - undo-alt
     - unlink

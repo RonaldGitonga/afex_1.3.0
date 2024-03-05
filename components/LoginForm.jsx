@@ -92,7 +92,7 @@ export default function LoginForm() {
       <div className="flex gap-4 items-center">
         <Link
           href="/forgot-password"
-          className="shrink-0 font-medium text-blue-600 hover:underline dark:text-blue-500"
+          className="shrink-0 font-medium text-blue-600 hover:none dark:text-blue-500"
         >
           Forgot Password
         </Link>
@@ -159,7 +159,7 @@ export default function LoginForm() {
         Already have an account?{" "}
         <Link
           href="/register"
-          className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+          className="font-medium text-blue-600 hover:none dark:text-blue-500"
         >
           Sign Up
         </Link>

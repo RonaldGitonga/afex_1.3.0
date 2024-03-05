@@ -29,7 +29,7 @@ function Main() {
 
     return (
         <>
-            <div className="header-area header-three" style={{fontFamily:'Montserrat'}}>
+            <div className="header-area header-three" style={{fontFamily:'Montserrat',textDecoration:'none'}}>
                 <div className="header-top second-header d-none d-md-block">
                     <div className="container">
                         <div className="row align-items-center">
@@ -265,9 +265,9 @@ function Main() {
                             </button>
                         </form>
                         <div id="cssmenu3" className="menu-one-page-menu-container">
-                            <ul className="menu">
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <Link href="/">Home</Link>
+                            <ul className="menu" style={{textDecoration:'none'}}>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom" style={{textDecoration:'none'}}>
+                                    <Link href="/" >Home</Link>
                                 </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
                                     <Link href="/About">About Us</Link>

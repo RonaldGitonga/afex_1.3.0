@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Main() {
   return (
     <>
-        <footer className="footer-bg footer-p pt-90" style={{ backgroundColor: "#125875", backgroundImage: "url(assets/img/bg/footer-bg.png)" }} >
+        <footer className="footer-bg footer-p pt-90" style={{ backgroundColor: "#1a457e", backgroundImage: "url(assets/img/bg/footer-bg.png)" }} >
             <div className="footer-top pb-70">
                 <div className="container">
                 <div className="row justify-content-between">
