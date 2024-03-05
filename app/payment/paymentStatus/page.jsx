@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
 
-import React from 'react'
+
 
 const paymentStatus = () => {
     const [paymentStatus,setPaymentStatus]=useState(false)
