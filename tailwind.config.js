@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { Montserrat } from 'next/font/google'
 import {withUt} from 'uploadthing/tw'
 
 
@@ -13,6 +14,9 @@ export default withUt ({
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      'sans':[Montserrat]
+    }
   },
   plugins: [],
 })
