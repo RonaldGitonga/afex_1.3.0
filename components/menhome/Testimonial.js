@@ -87,7 +87,7 @@ function Testimonial() {
                                 <div className="qt-img">
                                     <Image width={40} height={40} src="/assets/img/testimonial/qt-icon.png" alt="img" />
                                 </div>
-                                <p>
+                                <p style={{color:'#1a457e', fontWeight:'bold'}}>
                                 AFEX also helped me with my SATs, prepping me with lessons and materials that gave me the concepts necessary to ace the SAT. I came to AFEX on the brink of giving up on this process with a 1320 on my SAT but I left with a 1500.
                                 </p>
                                 <div className="testi-author">
@@ -104,7 +104,7 @@ function Testimonial() {
                                     <Image width={40} height={40}src= "/assets/img/testimonial/qt-icon.png"alt="img" />
                          
                                 </div>
-                                <p>
+                                <p style={{color:'#1a457e', fontWeight:'bold'}}>
                                 "From gazing at towering
                                     skyscrapers to reshaping
                                     urban landscapes, I found
