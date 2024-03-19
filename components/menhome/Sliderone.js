@@ -10,7 +10,9 @@ const slides=[
         desc1:'Welcome To AFEX Hub',
         desc2:'Seize Your Opportunity',
         cta:'Take a look',
-        ctaLink:'/'
+        ctaLink:'/',
+        bgPos:'right',
+        textCol:'#1a457e'
     },
     {
         title:"banner_slide",
@@ -18,7 +20,9 @@ const slides=[
         desc1:'Enrollment is in progress.',
         desc2:'Sign Up Now',
         cta:'Register',
-        ctaLink:'/Contact'
+        ctaLink:'/Contact',
+        bgPos:'center',
+        textCol:'#dbac3b'
     },
     {
         title:"Financial_aid_slide",
@@ -26,7 +30,9 @@ const slides=[
         desc1:'Need Financial Assistance?',
         desc2:'We Can help.',
         cta:'Find Out',
-        ctaLink:'/Contact'
+        ctaLink:'/Contact',
+        bgPos:'center',
+        textCol:'#dbac3b'
     },
     {
         title:"Testimonials_slide",
@@ -34,7 +40,9 @@ const slides=[
         desc1:"And We're Good At It.",
         desc2:'Hear From Others Like You.',
         cta:'More Like This',
-        ctaLink:'/About'
+        ctaLink:'/About',
+        bgPos:'center',
+        textCol:'#fff'
     }
 ]
 
@@ -75,7 +83,7 @@ function Sliderone() {
                 {slides.map((slide,index)=>(
                     <section key={index} id="home" className="slider-area fix p-relative">
                        <div>
-                       <div className="single-slider slider-bg"  style={{ backgroundImage: `url(${slide.imageUrl})` , backgroundSize: "cover" }} >
+                       <div className="single-slider slider-bg"  style={{ backgroundImage: `url(${slide.imageUrl})` , backgroundSize: "cover" ,backgroundPosition:slide.bgPos}} >
                        <div className="container">
                            <div className="row">
                            <div className="col-lg-7 col-md-7">
@@ -83,7 +91,7 @@ function Sliderone() {
                                <h5 data-animation="fadeInUp" data-delay=".4s"  style={{fontWeight:'bolder'}}>
                                     AFEX Hub
                                </h5>
-                               <h2 data-animation="fadeInUp" style={{color:'#1a457e',fontWeight:'bolder'}} data-delay=".4s">
+                               <h2 data-animation="fadeInUp" style={{color:slide.textCol ,fontWeight:'bolder'}} data-delay=".4s">
                                    {slide.desc1}
                                </h2>
                                <p data-animation="fadeInUp" data-delay=".6s" style={{fontWeight:'bolder'}}>

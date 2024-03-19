@@ -35,14 +35,14 @@ function ChooseSection() {
                          
                         <CountUp style={{fontFamily:'Montserrat',fontSize:'35px', color:'#af3d2c',fontWeight:'bolder'}}
                     start={0}
-                    end={7500000}
+                    end={45000000}
                     duration={12}
                     
                          />
                         </div>
                         <Card.Body>
                             <Card.Title className='text-center text-capitalize mb-3'>
-                              Dollars in Average Annual Scholarships since 2018
+                              Dollars  Raised in Scholarships since 2018
                             </Card.Title>
                             <Card.Text className='text-center'>
                             We not only prepare you for tests and admissions but also our dedicated team also specializes in helping students secure funding, ensuring both academic and financial support.

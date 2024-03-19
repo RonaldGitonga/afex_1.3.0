@@ -105,17 +105,7 @@ function Testimonial() {
                          
                                 </div>
                                 <p style={{color:'#1a457e', fontWeight:'bold'}}>
-                                "From gazing at towering
-                                    skyscrapers to reshaping
-                                    urban landscapes, I found
-                                    my purpose in civil
-                                    engineering. AFEX guided
-                                    me to Cornell University,
-                                    where I'll build a
-                                    sustainable future.
-                                    Embrace mentorship,
-                                  and
-                                    engineer your dreams!"
+                                Looking back on my college application, I am grateful that AFEX was there with me every step of the way. I got milestones of what I was supposed to have done,early deadlines so that I wouldn't rush at the last minute which greatly contributed to my acceptance. 
                                 </p>  
                                 <div className="testi-author">
                                     <Image width={80} height={80}src="https://utfs.io/f/1a53565a-9867-4803-90a6-d2ac19ad5b76-vb3brz.jpg" alt="img" style={{borderRadius:'50px' }} />

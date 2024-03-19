@@ -18,13 +18,24 @@ function Main() {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             setIsScrolled(scrollTop > 0);
+            if (mobile){
+                console.log('mobile is active')
+            } else{
+                console.log('mobile is not active')
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+     
     }, []);
+    useEffect(()=>{
+
+    },[])
+
+
 
 
     return (
@@ -50,7 +61,7 @@ function Main() {
                                         <Link href="https://x.com/AfexKenya?t=16INcDh7pyWyzWB_7AKGLQ&s=09" title="Twitter">
                                             <i className="fab fa-twitter" />
                                         </Link>
-                                        <Link href="#" title="Youtube">
+                                        <Link href="https://www.youtube.com/watch?v=qHXxl7KE6Ho" title="Youtube">
                                             <i className="fab fa-youtube" />
                                         </Link>
                                     </span>
@@ -97,8 +108,8 @@ function Main() {
                             <div className="row align-items-center">
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
-                                        <Link href="/">
-                                            <Image src={'https://utfs.io/f/add6b694-9b50-451b-b819-eead915144a0-atl5s3.jpeg'}width={60} height={60}  className='rounded-4'/>
+                                       <Link href="/">
+                                            <img src="assets/img/logo/AfexLogo.jpg"  alt="logo" />
                                         </Link>
                                     </div>
                                 </div>
