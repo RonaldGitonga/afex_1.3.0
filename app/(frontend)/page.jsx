@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import './Home.css';
-import '@/app/front.css';
+
 import About from "@/components/menhome/About"
  import "@/app/home.css"
 import  Link  from 'next/link';
