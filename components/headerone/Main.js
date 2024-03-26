@@ -109,7 +109,7 @@ function Main() {
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
                                        <Link href="/">
-                                       <Image src={'https://utfs.io/f/add6b694-9b50-451b-b819-eead915144a0-atl5s3.jpeg'}width={30} height={30}  />
+                                       <Image src={'https://utfs.io/f/add6b694-9b50-451b-b819-eead915144a0-atl5s3.jpeg'}width={45} height={45}  />
                                         </Link>
                                     </div>
                                 </div>
