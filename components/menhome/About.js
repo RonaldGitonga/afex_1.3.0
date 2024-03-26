@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { Reveal } from '../Reveal/Reveal'
+import  {Reveal2}  from '../Reveal2/Reveal2'
 
 function About() {
   return (
@@ -21,9 +21,9 @@ function About() {
                         <span>
                          15<sub>+</sub>
                         </span>
-                        <Reveal>
+                        <Reveal2>
                         <p>Years of Experience</p>
-                        </Reveal>
+                        </Reveal2>
                     </div>
                     </div>
                 </div>
@@ -31,11 +31,11 @@ function About() {
                     <div className="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s" >
                     <div className="about-title second-title pb-25">
                         <h5>
-                        <i className="fal fa-graduation-cap" /> About Our Campus
+                        <i className="fal fa-graduation-cap" /> About Us
                         </h5>
-                        <h2>About Us</h2>
+                        <h2>What We Do</h2>
                     </div>
-                    <Reveal>
+                    <Reveal2>
                     <p className="text-black">
                     Discover your path to global education with AFEX Hub. 
                     Specializing in SAT, GMAT, and IELTS preparation, we 
@@ -44,7 +44,7 @@ function About() {
                     guidance are designed to boost your exam success and simplify
                     your international academic journey.
                     </p>
-                    </Reveal>
+                    </Reveal2>
                     
                     <div className="about-content2">
                         <div className="row">
@@ -58,9 +58,9 @@ function About() {
                               
                                 </div>{" "}
                                 <div className="text">
-                                    <Reveal>
+                                    <Reveal2>
                                     <h3 style={{color:'black'}}>Years Experience</h3>
-                                    </Reveal>
+                                    </Reveal2>
                                 </div>
                                 </div>
                             </li>
@@ -70,9 +70,9 @@ function About() {
                                     <span style={{fontWeight:'bold',fontFamily:'Montserrat'}}>82</span>
                                 </div>{" "}
                                 <div className="text">
-                                    <Reveal>
+                                    <Reveal2>
                                     <h3 style={{color:'black'}}>Annual U.S Admissions</h3>
-                                    </Reveal>
+                                    </Reveal2>
                                 </div>
                                 </div>
                             </li>

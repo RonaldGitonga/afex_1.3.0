@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
+import "@/app/home.css"
 
-function Main() {
+function dashboardNav() {
 
     const [Btnshow, setBtnshow] = useState(false);
     const [mobile, setmobile] = useState(false);
@@ -73,7 +74,7 @@ function Main() {
                                         <li>
                                             <div className="call-box">
                                                 <div className="icon">
-                                                    <img src="/assets/img/icon/phone-call.png" alt="img" />
+                                                    <img src="assets/img/icon/phone-call.png" alt="img" />
                                                 </div>
                                                 <div className="text">
                                                     <span>Call Now !</span>
@@ -86,7 +87,7 @@ function Main() {
                                         <li>
                                             <div className="call-box">
                                                 <div className="icon">
-                                                    <img src="/assets/img/icon/mailing.png" alt="img" />
+                                                    <img src="assets/img/icon/mailing.png" alt="img" />
                                                 </div>
                                                 <div className="text">
                                                     <span>Email Now</span>
@@ -109,7 +110,7 @@ function Main() {
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
                                        <Link href="/">
-                                            <img src="/assets/img/logo/AfexLogo.jpg"  alt="logo" />
+                                            <img src="assets/img/logo/AfexLogo.jpg"  alt="logo" />
                                         </Link>
                                     </div>
                                 </div>
@@ -121,75 +122,54 @@ function Main() {
                                                     <Link href="/">Home</Link>
                                                    
                                                 </li>
+                                                <li>
+                                                    <Link href="/About">About Us</Link>
+                                                </li>
                                                 <li className="has-sub">
-                                                    <Link href="/dashboard/users">Users</Link>
+                                                    <Link href="/Courses">Courses</Link>
                                                     <ul>
-                                                    <li>
-                                                            <Link href="/dashboard/users">View</Link>
+                                                        <li>
+                                                            <Link href="/Courses/SAT">SATs</Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/dashboard/users/add">Create</Link>
+                                                            <Link href="/Courses/GRE&GMAT">GRE/GMAT</Link>
                                                         </li>
-                                                   
+                                                        <li>
+                                                            <Link href="/Courses/IELTS-TOEFL">IELTS/TOEFL</Link>
+                                                        </li>
+                                                     
+                                                      
+                                                        
                                                     </ul>
                                                 </li>
                                                 <li className="has-sub">
-                                                    <Link href="/dashboard/blogs">Blogs</Link>
-                                                    <ul>
-                                                    <li>
-                                                            <Link href="/dashboard/blogs">View</Link>
-                                                        </li>
+                                                    <Link href="/Events">Events</Link>
+                                                    {/* <ul>
                                                         <li>
-                                                            <Link href="/dashboard/blogs/add">Create</Link>
-                                                        </li>
-                                                   
-                                                    </ul>
-                                                </li>
-
-                                              
-                                                <li className="has-sub">
-                                                    <Link href="/dashboard/courses">Courses</Link>
-                                                    <ul>
-                                                    <li>
-                                                            <Link href="/dashboard/courses">View</Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/dashboard/courses/add">Create Course</Link>
-                                                        </li>
-                                                   
-                                                    </ul>
-                                                </li>
-                                                <li className="has-sub">
-                                                    <Link href="/dashboard/events">Events</Link>
-                                                    <ul>
-                                                        <li>
-                                                            <Link href="/dashboard/events">View</Link>
+                                                            <Link href="/Events">Events</Link>
                                                         </li>
                                                        
                                                         <li>
-                                                            <Link href="/dashboard/events/add">Create</Link>
+                                                            <Link href="/projects">Gallery</Link>
                                                         </li>
                                                         
+                                                        <li>
+                                                            <Link href="/FAQs">FAQs</Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/Tutors">Our Tutors</Link>
+                                                        </li>
                                                         
                                                        
-                                                    </ul>
+                                                    </ul> */}
                                                 </li>
                                                 <li className="has-sub">
-                                                    <Link href="/dashboard/tutors">Tutors</Link>
-                                                    <ul>
-                                                        <li>
-                                                            <Link href="/dashboard/tutors">View</Link>
-                                                        </li>
-                                                       
-                                                        <li>
-                                                            <Link href="/dashboard/tutors/add">Create</Link>
-                                                        </li>
-                                                        
-                                                        
-                                                       
-                                                    </ul>
+                                                    <Link href="/Blog">Blog</Link>
+                                                
                                                 </li>
-                                           
+                                                <li>
+                                                    <Link href="/Contact">Contact</Link>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -224,42 +204,25 @@ function Main() {
                                                           
                     
                                                         </li>
-                                                        {/* Users */}
-                                                             
-                                                        <li className="has-sub">
-                                                            <Link href="/dashboard/users">Users</Link>
-                                                            <ul>
-                                                                <li>
-                                                                    <Link href="/dashboard/users">View</Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link href="/dashboard/users/add">Create User</Link>
-                                                                </li>
-                                                     
-                                                             </ul>
-                                                         
-                                                            
-
-                                                            <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setNews(!News) }} href="#" style={{ fontSize: 18 }}>
-                                                                {News ? "-" : "+"}
-                                                            </a>
+                                                        <li>
+                                                            <Link href="/About">About Us</Link>
                                                         </li>
-                                                        {/* Blogs */}
-                                                       
                                                         <li className="has-sub">
-                                                            <Link href="/dashboard/blogs">Blogs</Link>
+                                                            <Link href="/Courses">Courses</Link>
                                                             <ul>
                                                                 <li>
-                                                                    <Link href="/dashboard/blogs">View</Link>
+                                                                    <Link href="/Courses/SAT">SATs</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link href="/dashboard/blogs/add">Create Blog</Link>
+                                                                    <Link href="/Courses/GRE&GMAT">GRE/GMAT</Link>
                                                                 </li>
-                                                           
+                                                                <li>
+                                                                    <Link href="/Courses/IELTS-TOEFL">IELTS/TOEFL</Link>
+                                                                </li>
                                                      
                                                       
                                                         
-                                                             </ul>
+                                                    </ul>
                                                          
                                                             
 
@@ -267,31 +230,28 @@ function Main() {
                                                                 {News ? "-" : "+"}
                                                             </a>
                                                         </li>
-
-                                                        {/* Courses */}
                                                         <li className="has-sub">
-                                                            <Link href="/dashboard/courses">Courses</Link>
-                                                            <ul>
-                                                                <li>
-                                                                    <Link href="/dashboard/courses">View</Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link href="/dashboard/courses/add">Create Course</Link>
-                                                                </li>
-                                                       
-                                                             </ul>
-                                                         
-                                                            
-
-                                                            <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setNews(!News) }} href="#" style={{ fontSize: 18 }}>
-                                                                {News ? "-" : "+"}
+                                                            <a href="#">Pages</a>
+                                                            {Services &&
+                                                                <ul style={{ display: "block" }}>
+                                                                    <li>
+                                                                        <Link href="/Events">Events</Link>
+                                                                    </li>
+                                                                
+                                                                </ul>
+                                                            }
+                                                            <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setServices(!Services) }} href="#" style={{ fontSize: 18 }}>
+                                                                {Services ? "-" : "+"}
                                                             </a>
                                                         </li>
-
-                                                        {/* Events */}
-                                                        {/* Tutors */}
-
-                                                   
+                                                        <li className="has-sub">
+                                                            <Link href="/Blog">Blog</Link>
+                                                           
+                                                            
+                                                        </li>
+                                                        <li className="mean-last">
+                                                            <Link href="/Contact">Contact</Link>
+                                                        </li>
                                                     </ul>
                                                 </nav>
                                             }
@@ -366,4 +326,4 @@ function Main() {
     )
 }
 
-export default Main
+export default dashboardNav;

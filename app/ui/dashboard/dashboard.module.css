@@ -1,8 +1,10 @@
 .container {
   display: flex;
+  flex-direction: column;
+
   --bg: #151c2c;
   --bgSoft: #182237;
-  --text: white;
+  --text: #fff;
   --textSoft: #b7bac1;
   background-color: var(--bg);
   color: var(--text);
@@ -41,5 +43,7 @@
 
 .side {
   flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 

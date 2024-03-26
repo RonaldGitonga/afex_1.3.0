@@ -8,7 +8,7 @@ import { Course } from "@/lib/models";
 export async function POST(request){
     const data=await request.json()
  
-    const{title,price,weeks,intake,desc,cohort,days,image}=data
+    const{title,price,weeks,intake,desc,cohort,days,image,noOfModules}=data
 
 
     try {
@@ -39,7 +39,8 @@ export async function POST(request){
             cohort,
             intake,
             weeks,
-            image
+            image,
+            noOfModules,
         
           });
       

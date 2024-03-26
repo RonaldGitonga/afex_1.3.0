@@ -21,6 +21,7 @@ const [formData, setFormData] = useState({
   cohort: '',
   desc:'',
   days:'',
+  noOfModules:'',
 
 });
 const[imageUrl,setImageUrl]=useState('')
@@ -43,6 +44,7 @@ const handleSubmit = async (e) => {
   data.append('desc', formData.desc);
   data.append('days', formData.days);
   data.append('image', imageUrl);
+  data.append('noOfModules', formData.noOfModules);
 
   const myData=Object.fromEntries(data)
 
@@ -91,6 +93,10 @@ const handleSubmit = async (e) => {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
+       
+
+    
+
         <input type="text" placeholder="title" name="title" required onChange={handleChange} />
         <select name="days" id="days" onChange={handleChange}>
           <option value="general">Choose Days</option>
@@ -98,19 +104,24 @@ const handleSubmit = async (e) => {
           <option value="Saturdays">Saturdays</option>
           <option value="Monday,Wednesday,Friday">Monday,Wednesday,Friday</option>
           <option value="Tuesday,Thursday,Saturday">Tuesday,Thursday,Saturday</option>
-         
         </select>
+
         <input type="number" placeholder="price" name="price" required onChange={handleChange} />
         <input type="number" placeholder="weeks" name="weeks" required onChange={handleChange}/>
         <input type="text" placeholder="intake" name="intake" onChange={handleChange}/>
         <input type="text" placeholder="cohort" name="cohort" onChange={handleChange}/>
-        <label className="block mb-4">
+        <input type="number" className='h-30px' placeholder="No.Of Modules" name="noOfModules" onChange={handleChange}/>
+       
+
+
+
+       <label className="block mb-4 ">
         <span className="text-white">Picture:</span>
 
         <UploadDropzone
         name ='image'
         endpoint="imageUploader"
-       
+
         
         onClientUploadComplete={(res) => {
           // Do something with the response
@@ -130,7 +141,7 @@ const handleSubmit = async (e) => {
           required
           name="desc"
           id="desc"
-          rows="16"
+          rows="14"
           placeholder="Description"
           onChange={handleChange}
         ></textarea>

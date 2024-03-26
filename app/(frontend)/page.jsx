@@ -7,10 +7,12 @@ import  Link  from 'next/link';
 import Header from '@/components/headerone/Main'
 import Testimonial from '@/components/menhome/Testimonial'
 import Slider from '@/components/menhome/Sliderone'
+import Consulting from '@/components/Menabout/Consulting'
 import ChooseSection from '../../components/ChooseSection/ChooseSection';
 
 import FaqAccordion from '@/components/FaqAccordion/FaqAccordion';
 import { Card } from 'react-bootstrap';
+import Map from '@/components/Map/Map';
 
 import Courses from '@/components/menhome/Courses'
 
@@ -52,14 +54,16 @@ function Home() {
 
        
         <Courses/>
+        <Consulting/>
+      
 
-        <div className="py-5">
+        <div className="py-5 mt-50">
             <FaqAccordion />
         </div>
         <Testimonial/>
         
 
-        <div className='blog-section text-light py-5'>
+        <div className='blog-section text-light py-5' >
             <div className='container d-flex flex-column align-items-center'>
                 <h2 className='text-center text-capitalize mb-5 ' style={{color:'#fff'}}>Latest Posts</h2>
                 <div className='row g-4'>
@@ -82,6 +86,7 @@ function Home() {
                 </Link>
             </div>
         </div>
+        <Map/>
     </div>
 
     </>

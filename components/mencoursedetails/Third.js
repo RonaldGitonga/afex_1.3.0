@@ -179,7 +179,7 @@ function Third() {
                                         <ul className="project-info clearfix">
                                             <li>
                                                 <div className="priceing">
-                                                    <strong>Ksh.70000.00</strong> 
+                                                    <strong>Ksh.70,000</strong> 
                                                     
                                                 </div>
                                             </li>

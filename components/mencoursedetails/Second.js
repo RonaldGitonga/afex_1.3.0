@@ -184,7 +184,7 @@ function Second() {
                                         <ul className="project-info clearfix">
                                             <li>
                                                 <div className="priceing">
-                                                    <strong>Ksh.16,500</strong> 
+                                                    <strong>Ksh.17,000</strong> 
                                                     
                                                 </div>
                                             </li>

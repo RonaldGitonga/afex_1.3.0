@@ -13,7 +13,7 @@ export default async function dashboardpage(){
     console.log(session)
     return(
         <div>
-            
+     
         </div>
     )
 }

@@ -108,6 +108,11 @@ function Testimonial() {
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 2,
+        outerHeight:100,
+        innerHeight:100,
+        
+        
+ 
         responsive: [
             {
                 breakpoint: 1024,
@@ -134,10 +139,11 @@ function Testimonial() {
             }
         ]
       };
+      
 
   return (
     <>
-       <section className="testimonial-area pt-120 pb-115 p-relative fix"style={{backgroundImage:"url(https://utfs.io/f/135c3b8c-5ca5-4be7-a0cb-ea8147455ee8-wylmfh.png)", paddingTop:'30px',paddingBottom:'30px'}}>
+       <section className="testimonial-area pt-120 pb-115 p-relative fix"style={{backgroundImage:"url(https://utfs.io/f/135c3b8c-5ca5-4be7-a0cb-ea8147455ee8-wylmfh.png)", paddingTop:'30px',paddingBottom:'30px' ,height:'100%'}}>
             
             <div className="animations-02">
                 <Image width={40} height={40}src="/assets/img/bg/an-img-04.png" alt="contact-bg-an-01" />

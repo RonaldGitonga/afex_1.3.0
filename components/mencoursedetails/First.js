@@ -185,7 +185,7 @@ function First() {
                                         <ul className="project-info clearfix">
                                             <li>
                                                 <div className="priceing">
-                                                    <strong>Ksh.70,000/-</strong> 
+                                                    <strong>Ksh.70,000</strong> 
                                                     
                                                 </div>
                                             </li>

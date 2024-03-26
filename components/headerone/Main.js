@@ -73,7 +73,7 @@ function Main() {
                                         <li>
                                             <div className="call-box">
                                                 <div className="icon">
-                                                    <img src="assets/img/icon/phone-call.png" alt="img" />
+                                                    <img src="/assets/img/icon/phone-call.png" alt="img" />
                                                 </div>
                                                 <div className="text">
                                                     <span>Call Now !</span>
@@ -86,7 +86,7 @@ function Main() {
                                         <li>
                                             <div className="call-box">
                                                 <div className="icon">
-                                                    <img src="assets/img/icon/mailing.png" alt="img" />
+                                                    <img src="/assets/img/icon/mailing.png" alt="img" />
                                                 </div>
                                                 <div className="text">
                                                     <span>Email Now</span>
@@ -109,7 +109,7 @@ function Main() {
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
                                        <Link href="/">
-                                            <img src="assets/img/logo/AfexLogo.jpg"  alt="logo" />
+                                            <img src="/assets/img/logo/AfexLogo.jpg"  alt="logo" />
                                         </Link>
                                     </div>
                                 </div>

@@ -27,7 +27,7 @@ function University() {
                     <div className="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s" >
                     <div className="about-title second-title pb-25">
                         <h5 style={{fontWeight:"bold",color:'#dbac3b' }}>
-                        <i className="fal fa-graduation-cap" /> About Our Campus
+                        <i className="fal fa-graduation-cap" /> About AfexHub
                         </h5>
                    <Reveal>   <h2 style={{color:'#dbac3b'}}>Who We are</h2> </Reveal>  
                     </div>

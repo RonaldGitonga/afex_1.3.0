@@ -25,6 +25,7 @@ const coursesPage = async ({ searchParams }) => {
         <thead>
           <tr>
           <td></td>
+          {/* course titles */}
             <td>Title</td>
             <td>Description</td>
             <td>Price</td>
@@ -35,8 +36,11 @@ const coursesPage = async ({ searchParams }) => {
             <td>Action</td>
           </tr>
         </thead>
+        {/* course info body */}
         <tbody>
           {courses.map((course) => (
+            
+            // course row
             <tr key={course.id}>
               <td>
                 <div className={styles.course}>
@@ -50,12 +54,16 @@ const coursesPage = async ({ searchParams }) => {
                   
                 </div>
               </td>
+
+
               <td>{course.title}</td>
-              <td>{course.desc}</td>
+              <td >{course.desc.slice(0,30)}...</td>
               <td>Kes.{course.price}</td>
               <td>{course.intake}</td>
               <td>{course.weeks}</td>
               <td>{course.days}</td>
+
+              {/* action buttons */}
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/courses/${course.id}`}>

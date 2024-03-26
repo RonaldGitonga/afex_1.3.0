@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser'
+import Map from '@/components/Map/Map'
 
 function Contact() {
     const [firstName,setFirstName]=useState('');
@@ -115,6 +116,7 @@ function Contact() {
             </Form>
         </div>
         </div>
+        <Map/>
 
 
     </>
