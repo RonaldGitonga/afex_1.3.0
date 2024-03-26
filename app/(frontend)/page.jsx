@@ -87,7 +87,7 @@ function Home() {
                 </Link>
             </div>
         </div>
-        <Map/>
+        {/* <Map/> */}
     </div>
 
     </>
