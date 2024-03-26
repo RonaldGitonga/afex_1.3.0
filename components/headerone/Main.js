@@ -109,7 +109,7 @@ function Main() {
                                 <div className="col-xl-3 col-lg-3">
                                     <div className="logo">
                                        <Link href="/">
-                                            <img src="/assets/img/logo/AfexLogo.jpg"  alt="logo"  width={40} height={40}/>
+                                            <img src="/assets/img/logo/AfexLogo.jpg"  alt="logo" />
                                         </Link>
                                     </div>
                                 </div>
