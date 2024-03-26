@@ -21,7 +21,7 @@ const blogs = [
     {
         id: 1,
         img: ['https://utfs.io/f/ea4bc170-f8e2-4e2a-b0e5-b3a6f99b880e-yvf5ne.jpg'],
-        title: "Empowering Change through Code: Jackline Matesu's Journey to Bucknell University's Computer Science Program",
+        title: "Empowering Change through Code: Jackline Masetu's Journey to Bucknell University's Computer Science Program",
         description: "What attracted you to Bucknell University's Computer Science program, and what do you hope to gain from your time there? I was attracted to Bucknell’s advanced makerspaces where students are able to launch their projects and get assistance from their professors and fellow students on how to improve their projects until they achieve the desired result. The program also contains a lot of intense programming courses ranging from python, Java to React which ensure that the student is efficient in coding. The Res college for society and technology also caught my eye as one gets to mingle with other students from other tech courses and build their own network."
     },
     {
