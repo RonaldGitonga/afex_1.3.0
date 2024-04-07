@@ -5,7 +5,14 @@ import { User } from "@/lib/models";
 //import token maker v4 and token encoder base64url
 import base64url from "base64url";
 import {v4 as uuidv4} from 'uuid'
+//Verification Import
+import { Resend } from 'resend';
+import { EmailTemplate } from "@/components/Resend/email-template";
+
 export async function POST(request) {
+
+  const resend=new Resend(process.env.RESEND_API_KEY)
+
   try {
     connectToDB();
     //extract the credentials
@@ -27,14 +34,27 @@ export async function POST(request) {
     }
     // Encrypt the Password =>bcrypt
     const hashedPassword = await bcrypt.hash(password, 10);
+
+
+
   //GENERATE TOKEN TO SEND TO EMAIL FOR VERIFICATION
       // Generate a random UUID (version 4)
   const rawToken = uuidv4();
 
+
   // Encode the token using Base64 URL-safe format
   const base64Token = base64url.encode(rawToken);
 
-  //SEND VERIFICATION TOKEN TO EMAIL
+
+  const redirectUrl=`login?token=${base64Token}`
+
+  const verificationData = await resend.emails.send({
+    from: 'AfexHub <info.kenya@afexhub.co.ke>',
+    to: email,
+    subject: 'Account Verification from AfexHub',
+    react: EmailTemplate({ username:firstName,redirectUrl}),
+  });
+  console.log(verificationData);
   
     // const newUser = new User({
   

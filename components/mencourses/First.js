@@ -4,6 +4,8 @@ import Link from 'next/link'
 //aimport { fetchfrontCourses } from "../../../libs/data";
 
 const First=()=>{
+  //get all courses
+    
   const courses=[
   {
     imgSrc: 'assets/img/courses/SATs.jpg',

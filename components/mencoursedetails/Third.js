@@ -134,7 +134,7 @@ function Third() {
                                         <tbody>
                                             <tr>
                                                 <td>Monday, Wednesday & Friday</td>
-                                                <td>8-10 Weeks</td>
+                                                <td>8-12 Weeks</td>
                                                 <td>9.30am - 2.30pm</td>
                                             </tr>
                                             
@@ -179,7 +179,7 @@ function Third() {
                                         <ul className="project-info clearfix">
                                             <li>
                                                 <div className="priceing">
-                                                    <strong>Ksh.70,000</strong> 
+                                                    <strong>Ksh.60,000</strong> 
                                                     
                                                 </div>
                                             </li>
@@ -187,7 +187,7 @@ function Third() {
                                            
                                             <li>
                                                 <span className="icon fal fa-clock" />{" "}
-                                                <strong>Duration: </strong> <span>8-10 weeks</span>
+                                                <strong>Duration: </strong> <span>8-12 weeks</span>
                                             </li>
                                             <li>
                                                 <span className="icon fal fa-user" />{" "}

@@ -19,7 +19,7 @@ function About() {
                     <div className="about-text second-about">
                        
                         <span>
-                         15<sub>+</sub>
+                         6<sub>+</sub>
                         </span>
                         <Reveal2>
                         <p>Years of Experience</p>
@@ -54,7 +54,7 @@ function About() {
                                 <div className="abcontent">
                                 <div className="ano">
                             
-                                    < span style={{fontWeight:'bold',fontFamily:'Montserrat'}}>15+</span>
+                                    < span style={{fontWeight:'bold',fontFamily:'Montserrat'}}>6+</span>
                               
                                 </div>{" "}
                                 <div className="text">

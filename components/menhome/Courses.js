@@ -96,9 +96,9 @@ function Courses() {
                         <div className="col-lg-12 p-relative">
                             <div className="section-title center-align mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s" >
                                 <h5>
-                                    <i className="fal fa-graduation-cap" /> Our Courses
+                                    {/* <i className="fal fa-graduation-cap" /> Our Courses */}
                                 </h5>
-                                <h2>Our Courses</h2>
+                                <h2>Our Offers</h2>
                             </div>
                         </div>
                     </div>

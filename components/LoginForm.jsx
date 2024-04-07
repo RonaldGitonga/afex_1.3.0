@@ -1,14 +1,27 @@
 "use client";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 export default function LoginForm() {
+
+  //search params hook
+  const searchParams=useSearchParams();
+  useEffect(()=>{
+    const token=searchParams.get('token')
+  
+    console.log(token)
+  },[])
+  
   const router = useRouter();
+//fetch token from params on mount
+
+
   const {
     register,
     handleSubmit,
@@ -161,7 +174,7 @@ export default function LoginForm() {
           href="/register"
           className="font-medium text-blue-600 hover:none dark:text-blue-500"
         >
-          Sign Up
+          Register
         </Link>
       </p>
     </form>

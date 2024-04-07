@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+//import { FaGithub, FaGoogle } from "react-icons/fa";
 import "@/app/globals.css"
 export default function RegisterForm() {
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function RegisterForm() {
       console.log(data);
       setLoading(true);
       const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-      const response = await fetch(`${baseUrl}/api/user`, {
+      const response = await fetch(`${baseUrl}/api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,32 +59,56 @@ export default function RegisterForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
       <div>
         <label
-          htmlFor="name"
+          htmlFor="firstName"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Your name
+          First Name
         </label>
         <input
-          {...register("name", { required: true })}
+          {...register("firstName", { required: true })}
           type="text"
-          name="name"
-          id="name"
+          name="firstName"
+          id="firstName"
           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="John Doe"
+          placeholder="John"
           required=""
         />
-        {errors.name && (
+        {errors.firstName && (
           <small className="text-red-600 text-sm ">
             This field is required
           </small>
         )}
       </div>
+      {/* Last name */}
+      <div>
+        <label
+          htmlFor="lastName"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Last Name
+        </label>
+        <input
+          {...register("lastName", { required: true })}
+          type="text"
+          name="lastName"
+          id="lastName"
+          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Doe"
+          required=""
+        />
+        {errors.lastName && (
+          <small className="text-red-600 text-sm ">
+            This field is required
+          </small>
+        )}
+      </div>
+      {/* Email */}
       <div>
         <label
           htmlFor="email"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Your email
+          Email
         </label>
         <input
           {...register("email", { required: true })}
@@ -96,6 +120,30 @@ export default function RegisterForm() {
           required=""
         />
         {errors.email && (
+          <small className="text-red-600 text-sm ">
+            This field is required
+          </small>
+        )}
+        <small className="text-red-600 text-sm ">{emailErr}</small>
+      </div>
+      {/* Phone Number */}
+      <div>
+        <label
+          htmlFor="email"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Phone Number
+        </label>
+        <input
+          {...register("phoneNumber", { required: true })}
+          type="text"
+          name="phoneNumber"
+          id="phoneNumber"
+          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="0700 123 456"
+          required=""
+        />
+        {errors.phoneNumber && (
           <small className="text-red-600 text-sm ">
             This field is required
           </small>
@@ -157,12 +205,12 @@ export default function RegisterForm() {
           Sign Up
         </button>
       )}
-      <div className="flex items-center ">
+      {/* <div className="flex items-center ">
         <div className="w-full bg-slate-500 h-[1px]"></div>
         <span className="mx-2">or</span>
         <div className="w-full bg-slate-500 h-[1px]"></div>
-      </div>
-      <div className="">
+      </div> */}
+      {/* <div className="">
         <button
           type="button"
           onClick={() => signIn("google")}
@@ -177,10 +225,10 @@ export default function RegisterForm() {
           className="w-full justify-center text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
         >
           {/* Icon */}
-          <FaGithub className="mr-2 w-4 h-4" />
+          {/* <FaGithub className="mr-2 w-4 h-4" />
           Sign up with Github
         </button>
-      </div>
+      </div> */} 
       <p className="text-sm font-light text-gray-500 dark:text-gray-400">
         Already have an account?{" "}
         <Link
