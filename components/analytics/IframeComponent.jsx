@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 
-const IframeComponent = () => {
-  const [iframeUrl, setIframeUrl] = useState('https://www.youtube.com');
+const IframeComponent = (props) => {
+  // const [iframeUrl, setIframeUrl] = useState('');
 
-  const handleUrlChange = (event) => {
-    setIframeUrl(event.target.value);
-  };
+  // const handleUrlChange = (event) => {
+  //   setIframeUrl(props.redirect_url);
+  // };
 
   return (
     <div>
-      <input
+      {/* <input
         type="text"
-        value={iframeUrl}
+        value={props.redirect_url}
         onChange={handleUrlChange}
         placeholder="Enter website URL"
-      />
+      /> */}
       <iframe
-        src={iframeUrl}
+        src={props.redirect_url}
         width="100%"
         height="500"
         frameBorder="0"

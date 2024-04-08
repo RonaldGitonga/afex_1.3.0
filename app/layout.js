@@ -26,14 +26,15 @@ import '@/public/assets/css/style.css'
  import '@/public/assets/css/responsive.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import BootstrapClient from '@/components/BootstrapClient';
-import {Montserrat} from 'next/font/google'
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
 
 
-const montserrat=Montserrat({
-  subsets:['latin'],
-  display:'swap',
-  variable:'--font-montserrat',
-})
+// const montserrat=Montserrat({
+//   subsets:['latin'],
+//   display:'swap',
+//   variable:'--font-montserrat',
+// })
 export const metadata = {
   title: "AFEX HUB",
   description: "Kenya's Premier Test Prep Centre",
@@ -41,7 +42,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className>
       <body >
         <AuthProvider>
           <Toaster position="top-center" reverseOrder={false}/>

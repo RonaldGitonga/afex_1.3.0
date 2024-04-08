@@ -1,10 +1,60 @@
 'use client'
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import IframeComponent from '@/components/analytics/IframeComponent';
 
 
 const PaymentForm =() => {
+  const router=useRouter();
+
+  const [redirectUrl, setRedirectUrl] = useState('');
+
+  //to confirm payment
+  const [paymentStatus,setPaymentStatus]=useState(false)
+  const [orderID,setOrderID]=useState('')
+  const[paymentToken,setPaymentToken]=('')
+  const[responseMessage,setResponseMessage]=('');
+
+
+
+  const [merchantReference,setMerchantReference]=useState('')
+  //check status of payments
+  useEffect(() => {
+    // Example: Axios fetch request
+     const checkPaymentStatus = async () => {
+      
+       try {
+
+          const body={orderID,paymentToken}
+         const response = await axios.get('/api/pesapal/checkPaymentStatus',body);
+         // Handle the response data as needed
+         if(response.status_code==1){
+           setPaymentStatus(true)
+          alert('Payment successful')
+          console.log(response);
+          router.push('/dashboard')
+         
+         } else{
+           if(response.status_code==0){
+               console.log(response);
+               alert('Payment Unsuccessful.Please Try Again.')
+           }
+         }
+        
+       } catch (error) {
+         console.error('Error fetching data:', error.message);
+       }
+     };
+
+
+   
+     // Uncomment the line below to call the function when the component mounts
+   checkPaymentStatus();
+   
+   
+   }, [orderID]); 
 
 
   const merchantreference = Math.floor(Math.random() * 10000000000)
@@ -15,7 +65,7 @@ const PaymentForm =() => {
     currency: 'KES',
     amount: 10,
     description: 'SAT',
-    callback_url: 'https://ada6-41-212-41-131.ngrok-free.app/payment/paymentStatus',
+    callback_url: 'https://526f-41-212-41-131.ngrok-free.app/payment/makePayment',
     notification_id: 'ad56b548-81d5-4277-9238-ddc1ba3a60b0',
     billing_address: {
       email_address: 'rgatuiku@gmail.com',
@@ -32,11 +82,9 @@ const PaymentForm =() => {
       zip_code: null,
     },
   };
-
   const [formData, setFormData] = useState(initialFormData);
-  const [responseMessage, setResponseMessage] = useState('');
-  const [orderID,setOrderID]=useState('')
-  const [merchantReference,setMerchantReference]=useState('')
+
+
 
 
 
@@ -52,9 +100,10 @@ const PaymentForm =() => {
       
       );
 
-      setResponseMessage(response.data);
+      setRedirectUrl(response.data.redirect_url);
       setOrderID(response.data.order_tracking_id)
-      console.log(responseMessage)
+      setPaymentToken(response.data.token)
+
     } catch (error) {
       console.error(error);
       setResponseMessage('Error submitting order request');
@@ -103,16 +152,22 @@ const PaymentForm =() => {
            //disabled={paymentStatus}
           className="bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
         >
-          Submit Order Request
+          Make Payment
         </button>
       </form>
-
-      {responseMessage && (
-        <div>
+    {/* Response Iframe */}
+    {redirectUrl && (
+      // console.log(responseMessage);
+        <div style={{width:'400px',height:'400px'}}>
+          <IframeComponent redirect_url={redirectUrl}/>
     
-     <a className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'href={responseMessage}>{responseMessage}</a>
-       </div>)}
+     {/* <a className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'href={responseMessage.redirect_url}>{responseMessage}</a> */}
+       </div>
+       )}
+   
     </div>
+
+    
   );
 };
 

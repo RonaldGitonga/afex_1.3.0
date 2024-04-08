@@ -2,20 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 body {
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Variable', sans-serif;
   background-color: #f8f8f8;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Variable', sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 
 h1, h2, h3, p, a {

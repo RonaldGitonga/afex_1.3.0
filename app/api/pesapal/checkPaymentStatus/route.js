@@ -1,20 +1,22 @@
 import {getAccessToken} from '@/lib/actions'
 import axios from 'axios';
 import { NextResponse } from "next/server";
-export async function GET(req){
-    const pesaPalToken=await getAccessToken()
-    const orderId=req.body
-
+export async function GET(req,res){
+    // const pesaPalToken=await getAccessToken()
+    const body=await req.body()
+    
+    console.log('request body incoming')
+    console.log (body);
     try {
         // Replace 'https://api.example.com/data' with your actual API endpoint
-        const apiUrl = `https://cybqa.pesapal.com/pesapalv3/api/Transactions/GetTransactionStatus?orderTrackingId=${orderId}`;
+        const apiUrl = `https://cybqa.pesapal.com/pesapalv3/api/Transactions/GetTransactionStatus?orderTrackingId=0e4a2a16-894f-46e9-b123-dd6099fe2637`;
     
         const response = await axios.get(apiUrl,
             {
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${pesaPalToken}`
+                    Authorization: `Bearer ${body.token}`
                   },
 
             },);

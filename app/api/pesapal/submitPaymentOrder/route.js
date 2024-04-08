@@ -19,10 +19,12 @@ export async function POST(req,res){
             Authorization: `Bearer ${pesaPalToken}`
           },
         })
-        const paymentData=response.data;
+        const paymentData={...response.data,token:pesaPalToken};
+
+        
         console.log(paymentData);
-      const url=response.data.redirect_url;
-      return new Response(JSON.stringify(url))
+
+      return new Response(JSON.stringify(paymentData))
       
     }
        catch (error) {
