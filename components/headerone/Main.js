@@ -178,7 +178,7 @@ function Main() {
                                         <ul>
                                             <li>
                                                 <Link href="#" className="menu-tigger" onClick={() => { setBtnshow(true) }}>
-                                                    <i className="fal fa-search" onClick={() => { setBtnshow(true) }} />
+                                                    {/* <i className="fal fa-search" onClick={() => { setBtnshow(true) }} /> */}
                                                 </Link>
                                             </li>
                                             <li>
