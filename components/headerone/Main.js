@@ -271,9 +271,9 @@ function Main() {
                         </span>
                         <form role="search" method="get" id="searchform" className="searchform" action="http://wordpress.zcube.in/xconsulta/" >
                             <input type="text" name="s" id="search" placeholder="Search" />
-                            <button>
+                            {/* <button>
                                 <i className="fa fa-search" />
-                            </button>
+                            </button> */}
                         </form>
                         <div id="cssmenu3" className="menu-one-page-menu-container">
                             <ul className="menu" style={{textDecoration:'none'}}>
