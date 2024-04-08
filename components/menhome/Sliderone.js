@@ -16,7 +16,7 @@ const slides=[
     },
     {
         title:"banner_slide",
-        imageUrl:'https://utfs.io/f/82e27d27-1d41-4c51-b8df-f6d7e8c5202e-31lipj.jpeg',
+        imageUrl:'https://utfs.io/f/c3b8a896-e979-42a2-8286-b10b59ada96e-fibutn.jpg',
         desc1:'Enrollment is in progress.',
         desc2:'Sign Up Now',
         cta:'Register',

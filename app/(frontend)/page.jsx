@@ -26,7 +26,7 @@ const blogs = [
     },
     {
         id: 2,
-        img: ['https://utfs.io/f/8bef9787-ebc4-4af0-9fb8-0c398b1ab0ff-fibutn.jpg'],
+        img: ['https://utfs.io/f/25b8726d-1ef5-4057-90dd-d69bed90aca9-fivnf0.jpg'],
         title: "Lights, Camera, Action! John Muigai's Road to New York University with AFEX's Support",
         description: " Can you tell us about your journey and decision to pursue film and photography in college? I have been interested in pursuing film from a young age. I am incredibly passionate about theatre, drama and literature and all those interests culminated in an affinity for film. I chose to pursue it at college level because much as one can do it without necessarily having studied at college level, having a degree from a renowned university will set you apart from others in this very competitive industry. Moreover, a lot of colleges offer work placements and exposure opportunities that can really give one a leg-up in their journey into the arts.   What inspired your passion for film and photography, particularly in the context of your experiences in Nairobi? As a young African Filmmaker, I have grown up on Western Media and watched the global cinema scene be engulfed by its influence. I either saw a few African stories that were built on stereotypes, caricatures and Western idea",
     },
@@ -53,9 +53,9 @@ function Home() {
         </div>
         <About/>
 
-       
-        <Courses/>
         <Consulting/>
+        <Courses/>
+        
       
 
         <div className="py-5 mt-50">

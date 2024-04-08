@@ -59,7 +59,7 @@ function About() {
                                 </div>{" "}
                                 <div className="text">
                                     <Reveal2>
-                                    <h3 style={{color:'black'}}>Years Experience</h3>
+                                    <h3 style={{color:'black'}}>Years Of Experience</h3>
                                     </Reveal2>
                                 </div>
                                 </div>

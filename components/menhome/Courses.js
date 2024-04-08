@@ -98,7 +98,7 @@ function Courses() {
                                 <h5>
                                     {/* <i className="fal fa-graduation-cap" /> Our Courses */}
                                 </h5>
-                                <h2>Our Offers</h2>
+                                <h2>Our Services</h2>
                             </div>
                         </div>
                     </div>
