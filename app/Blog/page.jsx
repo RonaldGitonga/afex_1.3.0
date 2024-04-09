@@ -34,7 +34,7 @@ function Blog() {
     <div className='blog-page'>
         <header className='height-75'>
             <div className='container h-100 d-flex flex-column align-items-center justify-content-center text-light'>
-                <h1 className='text-center fw-semibold'>Blog</h1>
+                <h1 className='text-center fw-semibold ' style={{color:"#fff"}}>Blog</h1>
                 <p className='text-center w-75 mb-5'>“There’s a lot of information out there for free, so you’ve got to figure out what makes your information different.” – Matt Wolfe</p>
             </div>
         </header>
