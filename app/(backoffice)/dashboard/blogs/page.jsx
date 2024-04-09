@@ -33,16 +33,16 @@ const blogsPage = async ({ searchParams }) => {
               <td>
                 <div className={styles.courses}>
                   <Image
-                    src={blog.imgSrc || "/nocourse.jpg"}
+                    src={blog.image || "/nocourse.jpg"}
                     alt=""
-                    width={100}
-                    height={100}
+                    width={70}
+                    height={70}
                     className={styles.blogImage}
                   />
                   {blog.name}
                 </div>
               </td>
-              <td>{blog.desc}</td>
+              <td>{blog.description.slice(0,30)}...</td>
            
               <td>
                 <div className={styles.buttons}>

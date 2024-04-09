@@ -4221,6 +4221,7 @@ line-height: 22px;
 .event-item:hover .event-content{
     background: #1a457e;
     color: #96bece;
+    text:white
 }
 .event-item:hover .event-content .time{
     color: #bbeafe;

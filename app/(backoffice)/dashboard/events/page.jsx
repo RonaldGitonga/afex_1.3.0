@@ -1,9 +1,19 @@
+
 import React from 'react'
 
-const page = () => {
+
+import First from '@/components/menevent/First'
+
+
+function page() {
   return (
-    <div>Events</div>
+  <>
+    
+        {/* <Bredcom title="Home" subtitle="Upcoming Events"/> */}
+        <First/>
+        {/* <Brand/> */}
+        </>
   )
 }
 
-export default page
+export default page;

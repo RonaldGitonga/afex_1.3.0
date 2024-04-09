@@ -1,14 +1,23 @@
 import { connectToDB } from "@/lib/utils/connectToDb";
 import { NextResponse } from "next/server";
 import { Blog } from "@/lib/models";
+import { fetchBlogs } from "@/lib/data";
 
 
 
 //Create New Blog
 export async function POST(request){
-    const data=await request.json()
- 
+    const data= await request.json()
     const{name,description,image}=data
+
+      //console log each field
+      console.log('Params from client side')
+      console.log(name)
+      console.log(description)
+      console.log(image)
+      console.log('end of params')
+ 
+
 
 
     try {
@@ -34,7 +43,7 @@ export async function POST(request){
         const newBlog = new Blog({
             name,
             description,
-            image
+            image,
         
           });
       
@@ -59,3 +68,5 @@ export async function POST(request){
           );
     }
 }
+
+//get all blogs dashboard

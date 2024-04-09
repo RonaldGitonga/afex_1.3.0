@@ -13,13 +13,10 @@ const router=useRouter()
 
 //form data
 const [formData, setFormData] = useState({
-  title:'',
-  price: '',
-  weeks: '',
-  intake: '',
-  cohort: '',
-  desc:'',
-  days:'',
+name:'',
+description:'',
+
+
 
 });
 const[imageUrl,setImageUrl]=useState('')
@@ -35,7 +32,7 @@ const handleSubmit = async (e) => {
 
   const data = new FormData();
   data.append('name', formData.name);
-  data.append('description', formData.descrption);
+  data.append('description', formData.description);
   data.append('image', imageUrl);
 
   const myData=Object.fromEntries(data)
@@ -70,7 +67,7 @@ const handleSubmit = async (e) => {
       } else {
         // Handle other errors
         console.error("Server Error:", responseData.message);
-        toast.error("Oops Something Went wrong");
+        toast.error(responseData.message);
       }
     }
   } catch (error) {
@@ -89,6 +86,7 @@ return(
           <UploadDropzone
         name ='image'
         endpoint="imageUploader"
+        id='image'
        
         
         onClientUploadComplete={(res) => {

@@ -4,7 +4,7 @@
 import React from "react";
 import styles from "@/app/ui/dashboard/dashboard.module.css"
 import Header from '@/components/headertwo/Main'
-
+import '@fontsource-variable/montserrat';
 
 
 
