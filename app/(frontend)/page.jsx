@@ -16,7 +16,7 @@ import FaqAccordion from '@/components/FaqAccordion/FaqAccordion';
 import Map from '@/components/Map/Map';
 
 import Courses from '@/components/menhome/Courses'
-import BlogCarousel from '@/components/BlogCarousel/blogCarousel';
+import BlogCarousel from '@/components/BlogCarousel/BlogCarousel';
 
 
 function Home() {
