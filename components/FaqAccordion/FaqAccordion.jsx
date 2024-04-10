@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import './FaqAccordion.css';
 import Accordion from 'react-bootstrap/Accordion';

@@ -35,10 +35,18 @@ import '@fontsource-variable/montserrat';
 //   display:'swap',
 //   variable:'--font-montserrat',
 // })
-export const metadata = {
-  title: "AFEX HUB",
-  description: "Kenya's Premier Test Prep Centre",
-};
+// export const metadata = {
+//   title: "AFEX HUB",
+//   description: "Kenya's Premier Test Prep Centre",
+// };
+export async function generateMetadata({params}){
+  return{
+    title:'Afex Hub',
+    description:'College SAT,IELTS,GMAT Prep'
+  }
+
+
+}
 
 export default function RootLayout({ children }) {
   return (

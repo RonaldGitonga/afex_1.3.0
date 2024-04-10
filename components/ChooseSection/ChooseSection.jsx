@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import CountUp from 'react-countup'

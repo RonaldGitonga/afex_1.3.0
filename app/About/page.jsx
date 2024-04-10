@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import University from '@/components/Menabout/University'
 import Header from '@/components/headerone/Main'
