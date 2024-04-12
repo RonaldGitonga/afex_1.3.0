@@ -14,6 +14,7 @@ const EventForm = () => {
     time: '',
     location: '',
     description: '',
+    link:'',
 
   });
   const[imageUrl,setImageUrl]=useState('')
@@ -36,6 +37,8 @@ const EventForm = () => {
     data.append('location', formData.location);
     data.append('description', formData.description);
     data.append('image', imageUrl);
+    data.append('link', formData.link);
+
 
     const myData=Object.fromEntries(data)
 
@@ -126,6 +129,15 @@ const EventForm = () => {
           className="mt-1 p-2 block w-full rounded-md border-gray-300 text-black"
         ></textarea>
       </label>
+      <label className="block mb-4">
+        <span className="text-gray-700">Google Form Link:</span>
+        <input
+          type="text"
+          name="link"
+          onChange={handleChange}
+          className="mt-1 p-2 block w-full rounded-md border-gray-300 text-black"
+        />
+        </label>
       <label className="block mb-4">
         <span className="text-gray-700">Picture:</span>
 

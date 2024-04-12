@@ -8,7 +8,7 @@ import { Event } from "@/lib/models";
 export async function POST(request){
     const data=await request.json()
  
-    const{title,date,time,location,description,image}=data
+    const{title,date,time,location,description,image,link}=data
 
 
     try {
@@ -38,6 +38,7 @@ export async function POST(request){
             location,
             description,
             image,
+            link,
         
           });
       

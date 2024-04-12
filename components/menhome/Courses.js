@@ -17,8 +17,7 @@ function SamplePrevArrow(props) {
       
     );
 }
-
-function Courses() {
+ function Courses() {
     const courses = [
         {
             category: 'SAT',

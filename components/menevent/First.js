@@ -43,7 +43,7 @@ const First = async ({ searchParams }) => {
                       {event.time} <i className="fal fa-long-arrow-right" />{' '}
                       <strong>{event.location}</strong>
 
-                      <Link href='/Contact'style={{ display:'flex',padding:'10px', marginTop:'5px',borderRadius:'5px', alignItems:'center',justifyItems:'center',textDecoration:'none'}}>
+                      <Link href={event.link} style={{ display:'flex',padding:'10px', marginTop:'5px',borderRadius:'5px', alignItems:'center',justifyItems:'center',textDecoration:'none'}}>
                         <h3 style={{textDecoration:'none',color:'#fff',background:'#af3d2c' ,padding:'5px',borderRadius:'5px'}}>RSVP</h3>
                         </Link>
                     </div>
