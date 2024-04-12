@@ -34,7 +34,7 @@ const First = async ({ searchParams }) => {
                     </Link>
                   </div>
                   <div className="event-content">
-                    <div className="date" style={{marginTop:'10px',fontWeight:'bolder'}}>{event.date.toString()}</div>
+                    <div className="date" style={{marginTop:'10px',fontWeight:'bolder'}}>{event.date.toString().slice(0,15)}</div>
                     <h3>
                       <Link href="">{event.title}</Link>
                     </h3>
